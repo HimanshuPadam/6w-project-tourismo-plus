@@ -4,7 +4,6 @@ const secret = "123#@$"
 module.exports =(req,res,next)=>{
         let token = req.headers["authorization"]
         if(!token){
-
                 res.send({
                     status:404,
                     success:false,
@@ -22,8 +21,17 @@ module.exports =(req,res,next)=>{
                             })
                     }
                     else{
-                        req.decoded = data
-                        next()
+                        if(data.userType == 1){
+                            req.decoded = data
+                            next()
+                        }
+                        else{
+                            res.send({
+                                status:403,
+                                success:false,
+                                message:"Unauthorized access!!"
+                            })
+                        }
                     }
             })
         }

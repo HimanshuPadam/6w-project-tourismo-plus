@@ -1,6 +1,19 @@
 const businessModel = require("./businessModel")
 
-const add = (req,res) => {}
+const registerbusiness = (req,res) => {
+    let errMsgs = []
+    if(!req.body.name)
+        errMsgs.push("name is request")
+    if(!req.body.name)
+        errMsgs.push("name is request")
+    if(!req.body.name)
+        errMsgs.push("name is request")
+    if(!req.body.name)
+        errMsgs.push("name is request")
+    if(!req.body.name)
+        errMsgs.push("name is request")
+
+}
 
 const getAll = (req,res) => {}
 

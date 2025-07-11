@@ -9,13 +9,9 @@ const touristSchema = new mongoose.Schema({
         type: String,
         default: ''
     },
-    password: {
-        type: String,
-        default: ''
-    },
     userType: {
-        type: String,
-        default: 'tourist'
+        type: Number,
+        default: 1
     },
     contact: {
         type: String,
@@ -24,6 +20,10 @@ const touristSchema = new mongoose.Schema({
     profileImage: {
         type: String,
         default: ''
+    },
+    location: {
+        type:String,
+        default: ""
     },
     preferences: {
         interests: {
