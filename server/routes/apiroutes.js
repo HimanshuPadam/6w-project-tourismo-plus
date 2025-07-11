@@ -2,10 +2,13 @@ const routes = require("express").Router()
 
 const businessController = require("../apis/Business/businessController")
 const touristController = require("../apis/Tourist/touristController")
+const userController = require("../apis/User/userController")
+
+
 routes.post("/business/getAll",businessController.getAll)
 routes.post("/tourist/getAll",touristController.getAll)
 
-
+routes.post("/user/login",userController.login)
 routes.use(require("../middlewares/tokenChecker"))
 
 routes.post("/business/add",businessController.add)
